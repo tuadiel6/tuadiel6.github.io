@@ -143,3 +143,23 @@ a.contact-card:hover { transform: translateY(-2px); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Publication DOI / full-text links */
+.pub-links { margin-top: .75rem; }
+.pub-doi {
+  display: inline-flex; align-items: center; gap: .45rem; max-width: 100%;
+  font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 500;
+  color: #1d4ed8; text-decoration: none; overflow-wrap: anywhere;
+  padding: .3rem .6rem .3rem .3rem; border-radius: .5rem;
+  border: 1px solid #dbeafe; background: rgba(239,246,255,.6);
+  transition: border-color .15s, background-color .15s;
+}
+.pub-doi:hover { border-color: #93c5fd; background: #eff6ff; }
+.pub-doi svg { flex: none; opacity: .7; }
+.pub-doi-label {
+  flex: none; font-size: 10px; font-weight: 700; letter-spacing: .06em;
+  padding: .1rem .4rem; border-radius: .3rem; color: #fff; background: #2563eb;
+}
+.dark .pub-doi { color: #93c5fd; border-color: rgba(30,64,175,.6); background: rgba(23,37,84,.4); }
+.dark .pub-doi:hover { border-color: #3b82f6; background: rgba(23,37,84,.7); }
+.dark .pub-doi-label { color: #0b0f19; background: #60a5fa; }
